@@ -1,0 +1,353 @@
+<html>
+
+ <head></head> 
+
+ <body> 
+
+  <meta charset="UTF-8"> 
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+
+  <title>R2 Web Editor</title> 
+
+  <div class="title"> 
+
+   <h4>R2 Web Editor</h4> 
+
+   <hr size="3"> 
+
+   <div class="main"> 
+
+    <textarea id="code-x" onkeyup="refresh()" placeholder="text here...(in html)">&lt;!doctype html&gt;
+
+&lt;html&gt;
+
+ &lt;body&gt;
+
+  &lt;font&gt;
+
+  &lt;/font&gt;  
+
+ &lt;/body&gt;  
+
+&lt;/html&gt;
+
+    </textarea> 
+
+    <iframe id="Canvas"></iframe> 
+
+   </div> 
+
+  </div> 
+
+  <style>
+
+html,body{
+
+  position: absolute;
+
+  height: 100vh;
+
+  left: 0;
+
+  right: 0;
+
+  top: 0;
+
+  margin: auto;
+
+  z-index: 5;
+
+  font-family: cursive;
+
+  font-size: 1.6em;
+
+  overflow-x: hidden;
+
+  text-align: center;
+
+  background: grey;
+
+  colour: white;
+
+  height: 550;
+
+}
+
+textarea{
+
+  position: absolute;
+
+  height: 100vh;
+
+  display: block;
+
+  margin: auto;
+
+  z-index: 5;
+
+  left: 0;
+
+  right: 0;
+
+  top: 17%;
+
+  height: 200;
+
+  width: 350;
+
+  overflow-x: hidden;
+
+  background: pink;
+
+  colour: white;
+
+  scrolling: smooth;
+
+}
+
+iframe{
+
+  position: absolute;
+
+  height: 100vh;
+
+  display: block;
+
+  margin: auto;
+
+  z-index: 5;
+
+  left: 0;
+
+  right: 0;
+
+  top: 60%;
+
+  height: 9999;
+
+  width: 800;
+
+  overflow-x: hidden;
+
+  background: lightyellow;
+
+  colour: white;
+
+  scrolling: smooth;
+
+}
+
+.button1{
+
+  position: absolute;
+
+  height: 100vh;
+
+  display: block;
+
+  margin: auto;
+
+  z-index: 5;
+
+  left: 300;
+
+  font-size: 1.5;
+
+  right: 0;
+
+  top: 11%;
+
+  height: 22;
+
+  width: 50;
+
+  background: transparent;
+
+  border-radius: 50px;
+
+  overflow: none;
+
+  colour: orange;
+
+  border: solid;
+
+}
+
+hr{
+
+  position: absolute;
+
+  top: 30;
+
+  width: 500;
+
+  background: black;
+
+}
+
+.button3{
+
+  position: absolute;
+
+  height: 100vh;
+
+  display: block;
+
+  margin: auto;
+
+  z-index: 5;
+
+  left: 60;
+
+  font-size: 1.5;
+
+  right: 0;
+
+  top: 11%;
+
+  height: 22;
+
+  width: 50;
+
+  background: transparent;
+
+  border-radius: 50px;
+
+  overflow: none;
+
+  colour: orange;  
+
+  border: solid;
+
+}
+
+.button4{
+
+  position: absolute;
+
+  height: 100vh;
+
+  display: block;
+
+  margin: auto;
+
+  z-index: 5;
+
+  left: 180;
+
+  font-size: 1.5;
+
+  right: 0;
+
+  top: 11%;
+
+  height: 22;
+
+  width: 50;
+
+  background: transparent;
+
+  border-radius: 50px;
+
+  overflow: none;
+
+  colour: orange;  
+
+  border: solid;
+
+}
+
+.button2{
+
+  position: absolute;
+
+  height: 100vh;
+
+  display: block;
+
+  margin: auto;
+
+  z-index: 5;
+
+  left: 0;
+
+  font-size: 1.5;
+
+  right: 335;
+
+  top: 11%;
+
+  height: 22;
+
+  width: 30;
+
+  background: transparent;
+
+  border-radius: 50px;
+
+  overflow: none;
+
+  colour: orange;
+
+  border: solid;
+
+}
+
+.button5{
+
+  position: absolute;
+
+  height: 100vh;
+
+  display: block;
+
+  margin: auto;
+
+  z-index: 5;
+
+  left: 0;
+
+  font-size: 1.5;
+
+  right: 260;
+
+  top: 11%;
+
+  height: 22;
+
+  width: 30;
+
+  background: transparent;
+
+  border-radius: 50px;
+
+  overflow: none;
+
+  colour: orange;
+
+  border: solid;
+
+}
+
+</style> 
+
+  <script>
+
+function refresh(){
+
+        const textContent = document.getElementById('code-x').value;
+
+        document.getElementById('Canvas').srcdoc = textContent;
+
+}
+
+console.log("A Blackhole Studios")
+
+</script> 
+
+ </body>
+
+</html>
